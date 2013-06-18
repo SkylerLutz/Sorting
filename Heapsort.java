@@ -9,10 +9,10 @@ public class Heapsort {
 			heapify(array, i, array.length);
 		}
 		for (int i = array.length - 1; i > 0; i--){
+			
 			T o = array[0];
 			array[0] = array[i];
 			array[i] = o;
-            
 			heapify(array, 0, i);
 		}
 	}
