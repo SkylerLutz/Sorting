@@ -4,10 +4,11 @@ public class Heapsort {
 
 	public static <T extends Comparable<? super T>> void heapSort(T[] array){
 		
-		for(int i = array.length; i >= 0; i--){
+		for (int i = array.length; i >= 0; i--){
+			
 			heapify(array, i, array.length);
 		}
-		for(int i = array.length-1; i > 0; i--){
+		for (int i = array.length - 1; i > 0; i--){
 			T o = array[0];
 			array[0] = array[i];
 			array[i] = o;
@@ -17,7 +18,7 @@ public class Heapsort {
 	}
 	private static <T extends Comparable<? super T>> void heapify(T[] array, int parent, int endIndex){
 		
-        int left = parent * 2 + 1;
+        	int left = parent * 2 + 1;
 		int right = parent * 2 + 2;
 		int big = 0;
         
