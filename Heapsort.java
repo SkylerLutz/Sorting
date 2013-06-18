@@ -34,7 +34,7 @@ public class Heapsort {
 
 			if(array[big].compareTo(array[parent]) > 0){
 				
-                T o = array[parent];
+                		T o = array[parent];
 				array[parent] = array[big];
 				array[big] = o;
 
