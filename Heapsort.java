@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Heapsort {
 
 	public static <T extends Comparable<? super T>> void heapSort(T[] array){
