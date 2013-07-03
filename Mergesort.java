@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Merge {
+public class Mergesort {
 	
 	public static <T extends Comparable<? super T>> void mergeSort(T[] array) {
 		
