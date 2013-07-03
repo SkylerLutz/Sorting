@@ -115,4 +115,44 @@ public class Sort {
 			}
 		}
 	}
+	public static <T extends Comparable<? super T>> void quickSort(T[] array) {
+
+		qSort(array, 0, array.length - 1);
+	}
+	private static <T extends Comparable<? super T>> void qSort(T[] array, int left, int right) {
+
+		int l = left;
+		int r = right;
+		int pivot = r;
+
+		if (left < right) {
+
+			while(l < r) {
+
+				while(l < r && array[l].compareTo(array[pivot]) <= 0){
+					l++;
+				}
+				
+				while(l < r && array[pivot].compareTo(array[r]) <= 0){
+					r--;
+				}
+
+				if(l < r) {
+
+					T temp = array[l];
+					array[l] = array[r];
+					array[r] = temp;
+				}
+			}
+
+			if(r != pivot) {
+
+				T temp = array[r];
+				array[r] = array[pivot];
+				array[pivot] = temp;
+			}
+			qSort(array, left, r-1);
+			qSort(array, r+1, right);
+		}
+	}
 }
