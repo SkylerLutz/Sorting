@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Sorting {
+public class Sort {
 	
 	public static <T extends Comparable<? super T>> void insertionSort(T[] array) {
 
