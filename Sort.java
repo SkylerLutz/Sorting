@@ -151,6 +151,7 @@ public class Sort {
 				array[r] = array[pivot];
 				array[pivot] = temp;
 			}
+
 			qSort(array, left, r-1);
 			qSort(array, r+1, right);
 		}
