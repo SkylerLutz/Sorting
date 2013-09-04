@@ -197,11 +197,9 @@ public class Sort {
 
 		T temp;
 		int j;
-
 		for (int i = lefto; i < righte; i++ ){
 
 			temp = array[i];
-
 			for (j = i; j > 0; j--) {
 				
 				if (array[j-1].compareTo(temp) > 0) {
@@ -209,13 +207,10 @@ public class Sort {
 					array[j] = array[j-1];
 				}
 				else {
-
 					break;
 				}
 			}
-
 			array[j] = temp;
 		}
-
 	}
 }
