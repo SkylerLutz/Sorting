@@ -221,6 +221,6 @@ public class Sort {
 	
 	private static <T extends Comparable<? super T>> void shellsort(T[] array){
 
-		
+		int[] gaps = {701, 301, 132, 57, 23, 10, 4, 1};
 	}
 }
