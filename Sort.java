@@ -179,6 +179,7 @@ public class Sort {
 		mergeSort(array, 0, array.length);		
 	}
 	private static <T extends Comparable<? super T>> void mergeSort(T[] array, int left, int right){
+
 		if(left < right) {
 
 			int rl = right / 2;
@@ -215,5 +216,6 @@ public class Sort {
 
 			array[j] = temp;
 		}
+
 	}
 }
