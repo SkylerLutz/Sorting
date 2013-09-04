@@ -195,6 +195,26 @@ public class Sort {
 	}
 	private static <T extends Comparable<? super T>> void merge(T[] array, int lefto, int righto, int lefte, int righte){
 
-		
+		T temp;
+		int j;
+
+		for (int i = lefto; i < righte; i++ ){
+
+			temp = array[i];
+
+			for (j = i; j > 0; j--) {
+				
+				if (array[j-1].compareTo(temp) > 0) {
+
+					array[j] = array[j-1];
+				}
+				else {
+
+					break;
+				}
+			}
+
+			array[j] = temp;
+		}
 	}
 }
