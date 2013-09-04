@@ -2,14 +2,12 @@ This is a repo of various popular sorting algorithms, implemented in Java.
 
 The growing list of sorting algorithms include:
 
-	<ul>
-		<li>Insertion Sort</li>
-		<li>Merge Sort</li>
-		<li>Heap Sort</li>
-		<li>Quick Sort</li>
-		<li>Selection Sort</li>
-		<li>Merge Sort (in place)</li>
-		<li>Shell Sort</li>
-		<li>Comb Sort</li>
-		<li>Bogo Sort</li>
-	</ul>
+	Insertion Sort
+	Merge Sort
+	Heap Sort
+	Quick Sort
+	Selection Sort
+	Merge Sort (in place)
+	Shell Sort
+	Comb Sort
+	Bogo Sort
