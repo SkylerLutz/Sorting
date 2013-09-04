@@ -243,4 +243,20 @@ public class Sort {
 			
 		}	
 	}
+	public static <T extends Comparable<? super T>> void combsort(T[] array){
+
+		float shrink = 1.3f;
+
+		for(int i=0; i < array.length; i++) {
+
+			for(int j=1; j < array.length; j++) {
+
+				if(array[j].compareTo(array[j-1]) < 0 ){
+					T temp = array[j];
+					array[j] = array[j-1];
+					array[j-1] = temp;
+				}
+			}
+		}
+	}
 }
