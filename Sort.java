@@ -264,22 +264,23 @@ public class Sort {
 	public static <T extends Comparable<? super T>> void bogosort(T[] array){
 
 		java.util.Random r = new java.util.Random();
-		while(true) {
+		boolean sorted = false;
+		while(!sorted) {
 
-			boolean sorted = true;
+			sorted = true;
 			for(int i=0; i < array.length-1; i++) {
 				if(array[i].compareTo(array[i+1]) > 0) {
 					sorted=false;
 				}
 			}
-			if(sorted) break;
-
-			for(int i=0; i < array.length; i++) {
-	
-				int n = r.nextInt(array.length);	
-				T temp = array[i];
-				array[i] = array[n];
-				array[n] = temp;
+			if(!sorted) {
+				for(int i=0; i < array.length; i++) {
+		
+					int n = r.nextInt(array.length);	
+					T temp = array[i];
+					array[i] = array[n];
+					array[n] = temp;
+				}
 			}
 		}
 	}
