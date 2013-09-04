@@ -174,4 +174,14 @@ public class Sort {
 			}
 		}
 	}
+	public static <T extends Comparable<? super T>> void mergeSortInPlace(T[] array){
+	
+		
+	}
+	private static <T extends Comparable<? super T>> void mergeSort(T[] array, int left, int right){
+	
+	}
+	private static <T extends Comparable<? super T>> void merge(T[] array, int lefto, int righto, int lefte, int righte){
+
+	}
 }
