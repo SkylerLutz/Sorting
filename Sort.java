@@ -213,4 +213,34 @@ public class Sort {
 			array[j] = temp;
 		}
 	}
+	
+	public static <T extends Comparable<? super T>> void shellsort(T[] array){
+
+		int[] gaps = {701, 301, 132, 57, 23, 10, 4, 1};
+		T temp;
+		int j;
+		for(int gap : gaps) {
+
+			if(gap < array.length) {
+
+				for(int i=0; i < array.length; i++) {
+					
+					temp = array[i];
+					for(j=i; (j > 0) && (j-gap >= 0); j-=gap) {
+
+						if(temp.compareTo(array[j-1]) < 0) {
+							array[j] = array[j-gap];
+						}
+						else  {
+							break;
+						}
+					}
+					if(j >= 0) {
+						array[j] = temp;
+					}
+				}
+			}
+			
+		}	
+	}
 }
