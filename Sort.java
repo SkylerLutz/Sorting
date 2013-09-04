@@ -176,12 +176,25 @@ public class Sort {
 	}
 	public static <T extends Comparable<? super T>> void mergeSortInPlace(T[] array){
 	
-		
+		mergeSort(array, 0, array.length);		
 	}
 	private static <T extends Comparable<? super T>> void mergeSort(T[] array, int left, int right){
 	
+		if(left < right) {
+
+			int rl = array.length / 2;
+			int ll = 0;
+			mergeSort(array, ll, rl);
+
+			int rr = array.length;
+			int lr = array.length / 2;
+			mergeSort(array, lr, rr);
+
+			merge(array, ll, rl, lr, rr);
+		}
 	}
 	private static <T extends Comparable<? super T>> void merge(T[] array, int lefto, int righto, int lefte, int righte){
 
+		
 	}
 }
